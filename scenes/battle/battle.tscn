@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://ngg0lg0n8oqm"]
+
+[ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_malhv"]
+[ext_resource type="PackedScene" uid="uid://dn7fcmnlrc5gn" path="res://scenes/ui/action_menu.tscn" id="2_4vyc1"]
+[ext_resource type="PackedScene" uid="uid://bk6f1hsbjm65" path="res://scenes/player/player.tscn" id="2_4401p"]
+[ext_resource type="Resource" uid="uid://b5wdsbtbbrwb1" path="res://characters/warrior/Warrior.tres" id="3_srsuo"]
+[ext_resource type="PackedScene" uid="uid://bpahqmdxpi17c" path="res://scenes/enemy/enemy.tscn" id="4_hyoku"]
+[ext_resource type="Resource" uid="uid://blepkyp8q631d" path="res://enemies/crab/crab.tres" id="5_auqoj"]
+
+[node name="Battle" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.447059, 0.447059, 0.447059, 1)
+texture = ExtResource("1_malhv")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_4401p")]
+position = Vector2(64, 90)
+stats = ExtResource("3_srsuo")
+
+[node name="Enemy" parent="." instance=ExtResource("4_hyoku")]
+position = Vector2(192, 90)
+stats = ExtResource("5_auqoj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ActionUI" parent="CanvasLayer" instance=ExtResource("2_4vyc1")]
+anchors_preset = 7
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -30.0
+offset_right = 35.0
+offset_bottom = 0.0
+grow_vertical = 0
+size_flags_vertical = 8

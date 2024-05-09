@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://casrmw5m4tbnb"]
+
+[ext_resource type="Theme" uid="uid://cawujxjmphy63" path="res://main_theme.tres" id="1_cbynw"]
+[ext_resource type="Texture2D" uid="uid://d0edy7thj8ce6" path="res://art/heart.png" id="2_gkj26"]
+[ext_resource type="Script" path="res://scenes/ui/stats_ui.gd" id="2_t3125"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="3_ubt1w"]
+
+[node name="StatsUI" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -8.0
+offset_right = 48.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cbynw")
+alignment = 1
+script = ExtResource("2_t3125")
+
+[node name="Health" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
+
+[node name="HealthIcon" type="TextureRect" parent="Health"]
+layout_mode = 2
+texture = ExtResource("2_gkj26")
+stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="Health"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "20
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Block" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 0
+
+[node name="BlockIcon" type="TextureRect" parent="Block"]
+layout_mode = 2
+texture = ExtResource("3_ubt1w")
+stretch_mode = 5
+
+[node name="BlockLabel" type="Label" parent="Block"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "5
+"
+horizontal_alignment = 1
+vertical_alignment = 1

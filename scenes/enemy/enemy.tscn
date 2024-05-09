@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpahqmdxpi17c"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_fh7dm"]
+[ext_resource type="Texture2D" uid="uid://d2vujk8wvu6ia" path="res://art/tile_0123.png" id="2_s8r51"]
+[ext_resource type="PackedScene" uid="uid://casrmw5m4tbnb" path="res://scenes/ui/stats_ui.tscn" id="3_6s84f"]
+
+[node name="Enemy" type="Node2D" groups=["enemies"]]
+scale = Vector2(1.00469, 1)
+script = ExtResource("1_fh7dm")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_s8r51")
+
+[node name="StatsUI" parent="." instance=ExtResource("3_6s84f")]
+offset_top = 10.0
+offset_bottom = 26.0
