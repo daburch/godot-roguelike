@@ -1,18 +1,16 @@
-# Deck Builder Tutorial for Godot
-A roguelike deckbuilder tutorial project made in Godot 4.
+# GODOT ROGUELIKE
 
-This branch only contains the art for the game.
+This is a simple roguelike game built in Godot.
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M0RXV24)
+Goals for this project are to gain experience designing and building large systems with a small team.
 
-### Use this version if you want to follow along with Season 1 the tutorial series.
-[Playlist to Season 1](https://www.youtube.com/playlist?list=PL6SABXRSlpH8CD71L7zye311cp9R4JazJ)
+Plan is to include turn based RPG combat with roguelike elements to build your character
+by obtaining gear and experience as well as followers to defeat the final boss.
 
-### Credits
-- [Ben from Heartbeast](https://www.youtube.com/@uheartbeast): he originally started working on this project. He gave me permission, inspiration and also great ideas for this tutorial.
-- [Kenney](https://kenney.nl)'s tiny dungeon asset pack
-- Sound effects:
-  - [StarNinjas](https://opengameart.org/users/starninjas) from OpenGameArt 
-  - [Pixabay](https://pixabay.com/sound-effects/shield-guard-6963/) 
-  - [artisticdude](https://opengameart.org/users/artisticdude) from OpenGameArt
-- Music made by [Tad](https://www.youtube.com/c/Tadon)
+flow:
+	- start game by selecting a class
+	- work your way through 3 stages similar to 'Slay the Spire' defeating a realm boss on each stage
+	- each step will be a battle/shop/heal style node
+	- wins from each battle can award experience, gold, equipment, or followers
+	- a base building system for between runs to generate helpful materials
+	- crafting system to create gear to be added as loot in future runs
